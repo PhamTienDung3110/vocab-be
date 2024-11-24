@@ -4,7 +4,7 @@ const User = require("../models/User");
 
 const router = express.Router();
 
-router.get("/test", async () => {
+router.get("/test", async (req, res) => {
   return res.json('success')
 });
 // Register
