@@ -8,7 +8,7 @@ const router = express.Router();
 router.post("/", authMiddleware, async (req, res) => {
   const { word, meaning, example } = req.body;
   try {
-    const newWord = new Vocabulary({ userId: req.userId, word, meaning, example });
+    const newWord = new Vocabulary({ userId: req.userId, word, meaning, example, level: 1 });
     await newWord.save();
     res.status(201).json(newWord);
   } catch (err) {
