@@ -6,6 +6,7 @@ const VocabularySchema = new mongoose.Schema({
   meaning: { type: String, required: true },
   example: { type: String },
   level: { type: Number },
+  type: { type: String, required: true }
 });
 
 module.exports = mongoose.model("Vocabulary", VocabularySchema);
